@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sheetgo AI Login</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f0f4f8; }
+        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 300px; text-align: center; }
+        .btn { background-color: #2979FF; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; width: 100%; margin-top: 20px;}
+        .btn:hover { background: rgba(41, 121, 255, 0.9); }
+
+        .btn.cancel { background-color: white; color: crimson; border: 1px solid crimson; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img decoding="async" src="https://static.sheetgo.com/wp-content/uploads/2020/05/sheetgo-logo-20200521.svg" alt="" style="width: 100px; margin-bottom: 20px;">
+        <h2>Sheetgo AI Agent</h2>
+        <p>Gemini Enterprise is requesting access to your account.</p>
+        <form action="/auth/confirm" method="post">
+            <input type="hidden" name="redirect_uri" value="{{ redirect_uri }}">
+            <input type="hidden" name="state" value="{{ state }}">
+            <button style="font-weight: bold" type="submit" class="btn">Authorize Access</button>
+            <button class="btn cancel" style="font-weight: lighter" onclick="window.close()">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>

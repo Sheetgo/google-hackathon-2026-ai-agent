@@ -1,0 +1,62 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "streaming": false,
+    "extensions": []
+  },
+  "defaultInputModes": [
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "text/plain"
+  ],
+  "description": "A human-in-the-loop AI agent that discovers, governs, and analyzes spreadsheet-driven operational workflows to generate real-time visual insights.",
+  "name": "Sheetgo AI Agent",
+  "iconUrl": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTY4IiBoZWlnaHQ9IjE2OCIgdmlld0JveD0iMCAwIDE2OCAxNjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNjgiIGhlaWdodD0iMTY4IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMzIgNDhDMzIgMzkuMTYzNCAzOS4xNjM0IDMyIDQ4IDMyQzU2LjgzNjYgMzIgNjQgMzkuMTYzNCA2NCA0OEM2NCA1Ni44MzY2IDU2LjgzNjYgNjQgNDggNjRDMzkuMTYzNCA2NCAzMiA1Ni44MzY2IDMyIDQ4WiIgZmlsbD0iI0Y4MDA0NiIvPgo8cGF0aCBkPSJNNzIgNDhDNzIgMzkuMTYzNCA3OS4xNjM0IDMyIDg4IDMySDEyMEMxMjguODM3IDMyIDEzNiAzOS4xNjM0IDEzNiA0OEMxMzYgNTYuODM2NiAxMjguODM3IDY0IDEyMCA2NEg4OEM3OS4xNjM0IDY0IDcyIDU2LjgzNjYgNzIgNDhaIiBmaWxsPSIjMjk3OUZGIi8+CjxwYXRoIGQ9Ik0zMiA4OEMzMiA3OS4xNjM0IDM5LjE2MzQgNzIgNDggNzJDNTYuODM2NiA3MiA2NCA3OS4xNjM0IDY0IDg4VjEyMEM2NCAxMjguODM3IDU2LjgzNjYgMTM2IDQ4IDEzNkMzOS4xNjM0IDEzNiAzMiAxMjguODM3IDMyIDEyMFY4OFoiIGZpbGw9IiNGRkFCMDAiLz4KPHBhdGggZD0iTTcyIDg4QzcyIDc5LjE2MzQgNzkuMTYzNCA3MiA4OCA3MkgxMjBDMTI4LjgzNyA3MiAxMzYgNzkuMTYzNCAxMzYgODhWMTIwQzEzNiAxMjguODM3IDEyOC44MzcgMTM2IDEyMCAxMzZIODhDNzkuMTYzNCAxMzYgNzIgMTI4LjgzNyA3MiAxMjBWODhaIiBmaWxsPSIjMDBDQzNFIi8+Cjwvc3ZnPgo=",
+  "protocolVersion": "1.0",
+  "preferredTransport": "JSONRPC",
+  "provider": {
+    "organization": "Sheetgo",
+    "url": "https://www.sheetgo.com"
+  },
+  "security": [
+    {
+      "sheetgoOAuth": [
+        "default"
+      ]
+    }
+  ],
+  "securitySchemes": {
+    "sheetgoOAuth": {
+      "flows": {
+        "authorizationCode": {
+          "authorizationUrl": "https://sheetgo-agent-prototype-547238816572.us-central1.run.app/auth",
+          "scopes": {
+            "default": "Authenticated access to Sheetgo AI services"
+          },
+          "tokenUrl": "https://sheetgo-agent-prototype-547238816572.us-central1.run.app/token"
+        }
+      },
+      "type": "oauth2"
+    }
+  },
+  "skills": [
+    {
+      "id": "search_workflows",
+      "name": "Search Workflows",
+      "description": "Finds or searches for workflows using a specific search term or query. This is useful for discovering existing workflows.",
+      "tags": [
+        "discovery",
+        "search"
+      ],
+      "examples": [
+        "Search for my 'customer' database workflows.",
+        "Show me all workflows with the word 'data' in the name.",
+        "Find workflows related to 'sales' data."
+      ]
+    }
+  ],
+  "url": "https://sheetgo-agent-prototype-547238816572.us-central1.run.app",
+  "version": "1.0.1"
+}
